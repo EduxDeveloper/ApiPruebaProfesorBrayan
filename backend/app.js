@@ -1,8 +1,11 @@
 import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
+//Estudiantes
 import registerEstudiantesRoutes from "./src/Routes/estudiantesRegisterRoute.js"
 import loginEstudiantesRoutes from "./src/Routes/estudiantesLoginRoutes.js"
+import logOutEstudiantesRoutes from "./src/Routes/logOutEstudiantesRoute.js"
+//
 
 const app = express();
 
@@ -14,7 +17,9 @@ app.use(cors({
 app.use(cookieParser())
 app.use(express.json())
 
+//Estudiantes
 app.use("/api/registrarEstudiantes", registerEstudiantesRoutes);
 app.use("/api/loginEstudiantes", loginEstudiantesRoutes)
+app.use("/api/logOut", logOutEstudiantesRoutes)
 
 export default app;
