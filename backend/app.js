@@ -9,6 +9,8 @@ import recoveryPasswordEstudiante from "./src/Routes/estudentRecoveryPassword.js
 import estudiantesRoutes from "./src/Routes/estudiantesControllerRoutes.js"
 //Tareas
 import tareasRoutes from "./src/Routes/tareasRoutes.js"
+//Categorias
+import categoriasRoutes from "./src/Routes/categoriasRoutes.js"
 
 const app = express();
 
@@ -24,8 +26,12 @@ app.use(express.json())
 app.use("/api/registrarEstudiantes", registerEstudiantesRoutes);
 app.use("/api/loginEstudiantes", loginEstudiantesRoutes)
 app.use("/api/logOut", logOutEstudiantesRoutes)
-app.use("/api/tareas", tareasRoutes)
 app.use("/api/recoveryPassword", recoveryPasswordEstudiante)
 app.use("/api/estudiantes", estudiantesRoutes)
+//Categorias
+app.use("/api/categorias", categoriasRoutes)
+//Tareas
+app.use("/api/tareas", tareasRoutes)
+
 
 export default app;
