@@ -14,6 +14,8 @@ import categoriasRoutes from "./src/Routes/categoriasRoutes.js"
 //Profesores
 import registerProfesorRoutes from "./src/Routes/profesorRegistrar.js"
 import loginProfesorRoutes from "./src/Routes/loginProfesoresRoutes.js"
+import logOutProfesores from "./src/Routes/logOutProfesoresRoutes.js"
+import recoveryPasswordProfesors from "./src/Routes/recoveryPasswordProfesors.js"
 
 
 const app = express();
@@ -39,5 +41,9 @@ app.use("/api/tareas", tareasRoutes)
 //Profesor
 app.use("/api/registrarProfesor", registerProfesorRoutes);
 app.use("/api/loginProfesores", loginProfesorRoutes)
+app.use("/api/logOutProfesores", logOutProfesores)
+app.use("/api/recoveryPasswordProfesors", recoveryPasswordProfesors)
+
+
 
 export default app;
