@@ -11,6 +11,9 @@ import estudiantesRoutes from "./src/Routes/estudiantesControllerRoutes.js"
 import tareasRoutes from "./src/Routes/tareasRoutes.js"
 //Categorias
 import categoriasRoutes from "./src/Routes/categoriasRoutes.js"
+//Profesores
+import registerProfesorRoutes from "./src/Routes/profesorRegistrar.js"
+
 
 const app = express();
 
@@ -32,6 +35,8 @@ app.use("/api/estudiantes", estudiantesRoutes)
 app.use("/api/categorias", categoriasRoutes)
 //Tareas
 app.use("/api/tareas", tareasRoutes)
+//Profesor
+app.use("/api/registrarProfesor", registerProfesorRoutes);
 
 
 export default app;
