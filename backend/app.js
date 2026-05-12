@@ -5,6 +5,7 @@ import cors from "cors";
 import registerEstudiantesRoutes from "./src/Routes/estudiantesRegisterRoute.js"
 import loginEstudiantesRoutes from "./src/Routes/estudiantesLoginRoutes.js"
 import logOutEstudiantesRoutes from "./src/Routes/logOutEstudiantesRoute.js"
+import recoveryPasswordEstudiante from "./src/Routes/estudentRecoveryPassword.js"
 //Tareas
 import tareasRoutes from "./src/Routes/tareasRoutes.js"
 
@@ -23,5 +24,6 @@ app.use("/api/registrarEstudiantes", registerEstudiantesRoutes);
 app.use("/api/loginEstudiantes", loginEstudiantesRoutes)
 app.use("/api/logOut", logOutEstudiantesRoutes)
 app.use("/api/tareas", tareasRoutes)
+app.use("/api/recoveryPassword", recoveryPasswordEstudiante)
 
 export default app;
