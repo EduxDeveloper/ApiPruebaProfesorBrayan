@@ -5,7 +5,8 @@ import cors from "cors";
 import registerEstudiantesRoutes from "./src/Routes/estudiantesRegisterRoute.js"
 import loginEstudiantesRoutes from "./src/Routes/estudiantesLoginRoutes.js"
 import logOutEstudiantesRoutes from "./src/Routes/logOutEstudiantesRoute.js"
-//
+//Tareas
+import tareasRoutes from "./src/Routes/tareasRoutes.js"
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use(express.json())
 app.use("/api/registrarEstudiantes", registerEstudiantesRoutes);
 app.use("/api/loginEstudiantes", loginEstudiantesRoutes)
 app.use("/api/logOut", logOutEstudiantesRoutes)
+app.use("/api/tareas", tareasRoutes)
 
 export default app;
