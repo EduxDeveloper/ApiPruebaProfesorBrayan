@@ -6,6 +6,7 @@ import registerEstudiantesRoutes from "./src/Routes/estudiantesRegisterRoute.js"
 import loginEstudiantesRoutes from "./src/Routes/estudiantesLoginRoutes.js"
 import logOutEstudiantesRoutes from "./src/Routes/logOutEstudiantesRoute.js"
 import recoveryPasswordEstudiante from "./src/Routes/estudentRecoveryPassword.js"
+import estudiantesRoutes from "./src/Routes/estudiantesControllerRoutes.js"
 //Tareas
 import tareasRoutes from "./src/Routes/tareasRoutes.js"
 
@@ -25,5 +26,6 @@ app.use("/api/loginEstudiantes", loginEstudiantesRoutes)
 app.use("/api/logOut", logOutEstudiantesRoutes)
 app.use("/api/tareas", tareasRoutes)
 app.use("/api/recoveryPassword", recoveryPasswordEstudiante)
+app.use("/api/estudiantes", estudiantesRoutes)
 
 export default app;
