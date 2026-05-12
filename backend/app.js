@@ -13,6 +13,7 @@ import tareasRoutes from "./src/Routes/tareasRoutes.js"
 import categoriasRoutes from "./src/Routes/categoriasRoutes.js"
 //Profesores
 import registerProfesorRoutes from "./src/Routes/profesorRegistrar.js"
+import loginProfesorRoutes from "./src/Routes/loginProfesoresRoutes.js"
 
 
 const app = express();
@@ -37,6 +38,6 @@ app.use("/api/categorias", categoriasRoutes)
 app.use("/api/tareas", tareasRoutes)
 //Profesor
 app.use("/api/registrarProfesor", registerProfesorRoutes);
-
+app.use("/api/loginProfesores", loginProfesorRoutes)
 
 export default app;
